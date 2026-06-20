@@ -3,6 +3,9 @@ My "minimal viable config" for Vim.
 
 Easy install
 
+Download and install:
+
 ``` shell
-ln -sf $(pwd)/vimrc ~/.vimrc
+curl -L https://snork.sh/mvcvim > ~/.vimrc
 ```
+
