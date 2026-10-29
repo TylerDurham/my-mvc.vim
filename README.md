@@ -8,9 +8,12 @@ My "minimally viable config" for Vim. Easy to install on a server with one comma
 
 Download and install:
 
+**Vim**
+
 ```shell
 curl -L https://snork.sh/mvcvim > ~/.vimrc
 ```
+
 
 ## Features
 
@@ -33,3 +36,14 @@ Leader key is `<Space>`. `jj` exits insert mode.
 | `<leader>fc` | Grep current filename |
 | `<leader>fi` | Find files in `~/.vim` |
 | `<leader>fh` | Help tags |
+
+# (New) Minimal Bash
+
+## Install 
+
+**Bash**
+
+``` shell
+curl -L https://snork.sh/mvcbash > ~/.bashrc
+```
+
