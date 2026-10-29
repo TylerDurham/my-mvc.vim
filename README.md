@@ -1,6 +1,6 @@
 # my-mvc.vim
 
-My "minimally viable configs" for Vim and Bash. Each is a single file, easy to install on a server with one command. Lightweight and fast.
+My "minimally viable configs" for Vim, Bash and Tmux. Each is a single file, easy to install on a server with one command. Lightweight and fast.
 
 ![screenshot](media/screenshot.png)
 
@@ -86,3 +86,39 @@ curl -L https://snork.sh/mvcbash > ~/.bashrc
 |---|---|
 | `fv` | Fuzzy pick a file (with preview) and open it in vim |
 | `fcd` | Fuzzy pick a directory and `cd` into it |
+
+## Tmux
+
+### Install
+
+```shell
+curl -L https://snork.sh/mvctmux > ~/.tmux.conf
+```
+
+### Features
+
+- Prefix is `Ctrl-Space`
+- Windows and panes numbered from 1, renumbered on close
+- Mouse on, 50k-line scrollback, true color (`tmux-256color` + RGB)
+- OSC 52 clipboard, so copies reach your local clipboard even over SSH
+- New windows and splits open in the current pane's directory
+- Vi copy mode
+- Theme uses your terminal's palette colors; status bar shows a prefix indicator, window number, directory, session and host
+- No plugins and no external scripts
+
+### Keybinds
+
+All bindings follow the prefix (`Ctrl-Space`).
+
+| Binding | Action |
+|---|---|
+| `\|` | Split vertically |
+| `-` | Split horizontally |
+| `h` / `j` / `k` / `l` | Move to left / down / up / right pane |
+| `←` / `↓` / `↑` / `→` | Resize pane by 5 (repeatable) |
+| `c` | New window in current directory |
+| `s` | Fuzzy switch session (needs fzf) |
+| `d` | Fuzzy kill sessions, multi-select (needs fzf) |
+| `r` | Reload config |
+
+In copy mode (`prefix [`): `v` starts a selection, `Ctrl-v` toggles rectangle selection and `y` copies.
